@@ -1,3 +1,7 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box; }
+
 body {
   background-color: gray; }
 
@@ -39,6 +43,25 @@ section {
   position: relative;
   overflow-x: hidden; }
 
+.line {
+  position: relative;
+  left: 245px;
+  width: 40px;
+  height: 100vh;
+  background-color: red; }
+
+.title-line {
+  display: flex;
+  margin-top: 100px;
+  transform: rotate(90deg); }
+
+.item-line {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.8em; }
+
 .menu {
   display: flex;
   align-items: center;
@@ -47,24 +70,24 @@ section {
   z-index: 99;
   left: 0;
   top: 0;
-  width: 10%;
+  width: 20%;
+  /*ширена меню*/
   height: 100vh;
   background-color: white;
   transition: 1s;
-  transform: translateX(-100%); }
+  transform: translateX(-90%); }
 
 .menu_active {
-  transform: translateX(0%); }
+  transform: translateX(-30%); }
 
 .menu-list,
 .menu-list ul,
 .menu-list ol {
   list-style: none;
   display: flex;
-  align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  height: 70%; }
+  height: 60%; }
 
 .menu-list a {
   text-decoration: none;
@@ -80,13 +103,7 @@ section {
   display: none; }
 
 .menu-list li > ul li a {
-  padding: 20px;
   text-transform: none; }
-
-.menu-list li > ul li ul {
-  position: absolute;
-  right: 0px;
-  top: 0; }
 
 .menu-list li:hover > ul {
   display: block; }
@@ -94,20 +111,15 @@ section {
 .menu-btn {
   width: 30px;
   height: 30px;
-  background-image: url(../img/btn-close.png);
   position: absolute;
-  right: -35px;
+  right: 5px;
   top: 50%;
   z-index: 99; }
 
-.menu-btn_active {
-  width: 30px;
-  height: 30px;
-  background-image: url(../img/Cinderella-1.jpg);
-  position: absolute;
-  right: 35px;
-  top: 50%;
-  z-index: 99; }
+.btn-line {
+  fill: black; }
+  .btn-line:hover {
+    fill: white; }
 
 .content {
   transition: 1s;

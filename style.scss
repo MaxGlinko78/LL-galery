@@ -1,0 +1,528 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+}
+
+$size: 50px;
+$distace: 100px;
+$speed: 4s;
+$amimation: linear;
+$delay: 0s;
+$iterationCount: infinite;
+
+.container {
+    width: 1400px;
+    margin: 0 auto;
+    background-color: orange;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,ffe4c4+50,ffe4c4+100 */
+    background: #1e5799;
+    /* Old browsers */
+    background: -moz-linear-gradient(45deg, #1e5799 0%, #2989d8 50%, #ffe4c4 50%, #ffe4c4 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #1e5799 0%, #2989d8 50%, #ffe4c4 50%, #ffe4c4 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(172deg, #1e5799 0%, #2989d8 49%, #ffe4c4 52%, #ffe4c4 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e5799', endColorstr='#ffe4c4', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+
+    border-radius: 9px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+
+
+
+
+
+
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+
+}
+
+
+
+.stage {
+    margin-top: 10px;
+    transform: translate(140%);
+    width: 100px;
+    height: 100px;
+
+}
+
+.ball {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    background: url("/img/world-map-one-color.png") repeat-x;
+    background-size: auto 100%;
+    animation: move-map 30s infinite linear;
+
+}
+
+
+.avatar {
+    width: $size;
+    height: $size;
+
+}
+
+.logo {}
+
+.logo-img {
+    width: 120px;
+    height: 120px;
+}
+
+.wrapper {
+    transform: translate(-110%);
+}
+
+.wrapper,
+.boll {
+    width: $size;
+    height: $size;
+}
+
+.wrapper {
+    position: relative;
+    transform: translate(50px 10px);
+}
+
+.boll {
+    position: absolute;
+    border-radius: $size;
+
+
+
+    &-1 {
+        background-color: red;
+        animation: $speed $amimation $delay $iterationCount boll-1;
+
+        &:hover {
+            animation-play-state: paused;
+        }
+
+
+    }
+
+    &-2 {
+        background-color: green;
+        animation: $speed $amimation $delay $iterationCount boll-2;
+
+        &:hover {
+            animation-play-state: paused;
+        }
+
+    }
+
+    &-3 {
+        background-color: blue;
+        animation: $speed $amimation $delay $iterationCount boll-3;
+
+        &:hover {
+            animation-play-state: paused;
+        }
+
+    }
+
+    &-4 {
+        background-color: pink;
+        animation: $speed $amimation $delay $iterationCount boll-4;
+
+        &:hover {
+            animation-play-state: paused;
+        }
+
+    }
+
+
+}
+
+@keyframes boll-1 {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(0, -$distace);
+    }
+
+    50% {
+        transform: translate($distace, 0);
+
+    }
+
+    75% {
+        transform: translate(-$distace, 0);
+
+    }
+
+}
+
+@keyframes boll-3 {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(0, $distace);
+    }
+
+    50% {
+        transform: translate(-$distace, 0);
+
+    }
+
+    75% {
+        transform: translate($distace, 0);
+
+    }
+
+}
+
+@keyframes boll-2 {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate($distace, 0);
+    }
+
+    50% {
+        transform: translate(0, $distace);
+
+    }
+
+    75% {
+        transform: translate(0, -$distace);
+
+    }
+
+}
+
+@keyframes boll-4 {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(-$distace, 0);
+    }
+
+    50% {
+        transform: translate(0, -$distace);
+
+    }
+
+    75% {
+        transform: translate(0, $distace);
+
+    }
+
+}
+
+
+@-moz-keyframes move-map {
+    0% {
+        background-position: -849px 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@-webkit-keyframes move-map {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -849px 0;
+    }
+}
+
+@keyframes move-map {
+    0% {
+        background-position: -849px 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+.header-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+        font-family: 'Bad Script', cursive;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        color: #F4A460;
+        margin-bottom: -25px;
+    }
+
+    .header-h2 {
+        color: white;
+        text-transform: uppercase;
+    }
+}
+
+.header-info {
+    padding: 10px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+
+.nav-top-menu {
+    display: flex;
+    justify-content: space-evenly;
+    width: 1400px;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: orange;
+    border-radius: 9px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+
+}
+
+.menu-link {
+    margin: 5px;
+    border: 2px solid white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    color: white;
+
+    &:hover {
+        color: orange;
+        background-color: white;
+    }
+}
+
+.main {
+    display: flex;
+    width: 1400px;
+    margin: 0 auto;
+    margin-top: 5px;
+
+}
+
+.main-news {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F0FFFF;
+    border-radius: 9px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    margin-right: 5px;
+
+    .main-news-wrapper {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        width: 300px;
+        color: blue;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+    }
+
+    .main-news-title {
+        color: blueviolet;
+        padding-left: 15px;
+        text-align: center;
+        text-transform: uppercase;
+
+    }
+
+    p {
+        padding: 10px;
+    }
+}
+
+.main-discription {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F0FFFF;
+    border-radius: 9px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    margin-right: 5px;
+    padding: 15px;
+
+}
+
+.main-some-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F0FFFF;
+    border-radius: 9px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    margin-right: 5px;
+    padding: 15px;
+
+}
+
+
+
+.author {
+    display: flex;
+    justify-content: space-evenly;
+    width: 1400px;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #F0FFFF;
+    border-radius: 9px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+
+}
+
+.card {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.card-body {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 300px;
+    height: 500px;
+    border: 2px solid #4169E1;
+    border-radius: 9px;
+
+    &:hover {
+
+        box-shadow: 10px 2px 8px 10px rgba(0, 0, 0, 0.15);
+    }
+
+}
+
+.card-title {
+    text-transform: uppercase;
+    text-align: center;
+    color: coral;
+}
+
+.card-text {
+    padding: 15px;
+}
+
+
+.nav-drop a {
+    border: 2px solid #4169E1;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 9px;
+}
+
+/* sub menu */
+.nav-drop li ul {
+    position: absolute;
+    min-width: 150px;
+    display: none;
+
+
+}
+
+.nav-drop li>ul li {
+    //border: 1px solid lightgrey;
+}
+
+.nav-drop li>ul li a {
+    padding: 10px;
+    text-transform: none;
+
+
+}
+
+.author-img-preview {
+    width: 230px;
+    height: 280px;
+    position: absolute;
+    top: 15px;
+    left: 0px;
+}
+
+.nav-drop li>ul li ul {
+    position: absolute;
+    right: -150px;
+    top: 10px;
+}
+
+.nav-drop li:hover>ul {
+    display: block;
+    transition: 0.3s ease;
+}
+
+.card {
+    margin-bottom: 20px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+
+}
+
+.card-item {
+    margin-top: 10px;
+    transition: transform 0.3s;
+    border-radius: 5px;
+
+}
+
+
+footer {
+
+    display: flex;
+    justify-content: space-evenly;
+    width: 1400px;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #1fcfcf;
+    border-radius: 9px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+
+    .text {
+        padding: 15px;
+    }
+
+}
+
+
+
+
+
+
+
+
+//transform: translate($distace, 0);

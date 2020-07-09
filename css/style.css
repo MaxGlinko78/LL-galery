@@ -14,6 +14,27 @@ section {
   max-width: 1400px;
   height: 100vh; }
 
+.container {
+  width: 1400px;
+  margin: 0 auto;
+  background-color: orange;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,ffe4c4+50,ffe4c4+100 */
+  background: #1e5799;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, #1e5799 0%, #2989d8 50%, #ffe4c4 50%, #ffe4c4 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #1e5799 0%, #2989d8 50%, #ffe4c4 50%, #ffe4c4 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(172deg, #1e5799 0%, #2989d8 49%, #ffe4c4 52%, #ffe4c4 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e5799', endColorstr='#ffe4c4', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+  border-radius: 9px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15); }
+
 .header {
   display: flex;
   justify-content: space-around;
@@ -24,31 +45,153 @@ section {
   background-color: #27ae60;
   border-radius: 5px; }
 
+.header-logo {
+  display: flex;
+  align-items: center; }
+
+.stage {
+  margin-top: 10px;
+  transform: translate(140%);
+  width: 100px;
+  height: 100px; }
+
+.ball {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background: url("/img/world-map-one-color.png") repeat-x;
+  background-size: auto 100%;
+  animation: move-map 30s infinite linear; }
+
+.avatar {
+  width: 50px;
+  height: 50px; }
+
+.logo-img {
+  width: 120px;
+  height: 120px; }
+
+.wrapper-animation {
+  transform: translate(-110%); }
+
+.wrapper-animation,
+.boll {
+  width: 50px;
+  height: 50px; }
+
+.wrapper-animation {
+  position: relative;
+  transform: translate(50px 10px); }
+
+.boll {
+  position: absolute;
+  border-radius: 50px; }
+  .boll-1 {
+    background-color: red;
+    animation: 4s linear 0s infinite boll-1; }
+    .boll-1:hover {
+      animation-play-state: paused; }
+  .boll-2 {
+    background-color: green;
+    animation: 4s linear 0s infinite boll-2; }
+    .boll-2:hover {
+      animation-play-state: paused; }
+  .boll-3 {
+    background-color: blue;
+    animation: 4s linear 0s infinite boll-3; }
+    .boll-3:hover {
+      animation-play-state: paused; }
+  .boll-4 {
+    background-color: pink;
+    animation: 4s linear 0s infinite boll-4; }
+    .boll-4:hover {
+      animation-play-state: paused; }
+
+@keyframes boll-1 {
+  0%,
+    100% {
+    transform: translate(0, 0); }
+  25% {
+    transform: translate(0, -100px); }
+  50% {
+    transform: translate(100px, 0); }
+  75% {
+    transform: translate(-100px, 0); } }
+@keyframes boll-3 {
+  0%,
+    100% {
+    transform: translate(0, 0); }
+  25% {
+    transform: translate(0, 100px); }
+  50% {
+    transform: translate(-100px, 0); }
+  75% {
+    transform: translate(100px, 0); } }
+@keyframes boll-2 {
+  0%,
+    100% {
+    transform: translate(0, 0); }
+  25% {
+    transform: translate(100px, 0); }
+  50% {
+    transform: translate(0, 100px); }
+  75% {
+    transform: translate(0, -100px); } }
+@keyframes boll-4 {
+  0%,
+    100% {
+    transform: translate(0, 0); }
+  25% {
+    transform: translate(-100px, 0); }
+  50% {
+    transform: translate(0, -100px); }
+  75% {
+    transform: translate(0, 100px); } }
+@-moz-keyframes move-map {
+  0% {
+    background-position: -849px 0; }
+  100% {
+    background-position: 0 0; } }
+@-webkit-keyframes move-map {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: -849px 0; } }
+@keyframes move-map {
+  0% {
+    background-position: -849px 0; }
+  100% {
+    background-position: 0 0; } }
 .header-title {
-  color: orange;
-  font-weight: bold;
-  font-size: 25px; }
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .header-title h3 {
+    font-family: 'Bad Script', cursive;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #F4A460;
+    margin-bottom: -25px; }
+  .header-title .header-h2 {
+    color: white;
+    text-transform: uppercase; }
 
-.header-title-text {
-  color: white; }
-
-.header-subtitle {
-  margin-left: -100px;
-  color: white;
-  letter-spacing: 0.5em;
-  font-weight: bold;
-  font-size: 25px; }
+.header-info {
+  padding: 10px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column; }
 
 .wrapper {
   position: relative;
   overflow-x: hidden; }
 
 .line {
-  position: relative;
-  left: 245px;
-  width: 40px;
+  position: fixed;
+  left: 100%;
+  width: 11%;
   height: 100vh;
-  background-color: red; }
+  background-color: lightgreen; }
 
 .title-line {
   display: flex;
@@ -75,14 +218,16 @@ section {
   height: 100vh;
   background-color: white;
   transition: 1s;
-  transform: translateX(-90%); }
+  transform: translateX(-100%); }
 
 .menu_active {
-  transform: translateX(-30%); }
+  transform: translateX(-20%); }
 
 .menu-list,
 .menu-list ul,
 .menu-list ol {
+  position: relative;
+  left: -150px;
   list-style: none;
   display: flex;
   justify-content: space-around;
@@ -90,9 +235,11 @@ section {
   height: 60%; }
 
 .menu-list a {
+  display: block;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: 900; }
+  font-weight: 900;
+  width: 60px; }
   .menu-list a:hover {
     color: #27ae60; }
 
@@ -137,5 +284,166 @@ section {
 
 .portfolio {
   background-color: #f1c40f; }
+
+.nav-top-menu {
+  display: flex;
+  justify-content: space-evenly;
+  width: 1400px;
+  margin: 0 auto;
+  margin-top: 10px;
+  background-color: orange;
+  border-radius: 9px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15); }
+
+.menu-link {
+  margin: 5px;
+  border: 2px solid white;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: white; }
+  .menu-link:hover {
+    color: orange;
+    background-color: white; }
+
+.main {
+  display: flex;
+  width: 1400px;
+  margin: 0 auto;
+  margin-top: 5px; }
+
+.main-news {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #F0FFFF;
+  border-radius: 9px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  margin-right: 5px; }
+  .main-news .main-news-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    width: 300px;
+    color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600; }
+  .main-news .main-news-title {
+    color: blueviolet;
+    padding-left: 15px;
+    text-align: center;
+    text-transform: uppercase; }
+  .main-news p {
+    padding: 10px; }
+
+.main-discription {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #F0FFFF;
+  border-radius: 9px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  margin-right: 5px;
+  padding: 15px; }
+
+.main-some-block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #F0FFFF;
+  border-radius: 9px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  margin-right: 5px;
+  padding: 15px; }
+
+.author {
+  display: flex;
+  justify-content: space-evenly;
+  width: 1400px;
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #F0FFFF;
+  border-radius: 9px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15); }
+
+.card {
+  display: flex;
+  justify-content: space-evenly; }
+
+.card-body {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 300px;
+  height: 500px;
+  border: 2px solid #4169E1;
+  border-radius: 9px; }
+  .card-body:hover {
+    box-shadow: 10px 2px 8px 10px rgba(0, 0, 0, 0.15); }
+
+.card-title {
+  text-transform: uppercase;
+  text-align: center;
+  color: coral; }
+
+.card-text {
+  padding: 15px; }
+
+.nav-drop a {
+  list-style-type: none;
+  border: 2px solid #4169E1;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 9px; }
+
+/* sub menu */
+.nav-drop li ul {
+  position: absolute;
+  min-width: 150px;
+  display: none;
+  list-style: none; }
+
+li {
+  list-style-type: none; }
+
+.nav-drop li > ul li a {
+  padding: 10px;
+  text-transform: none; }
+
+.author-img-preview {
+  width: 230px;
+  height: 280px;
+  position: absolute;
+  top: 15px;
+  left: 0px; }
+
+.nav-drop li > ul li ul {
+  position: absolute;
+  right: -150px;
+  top: 10px; }
+
+.nav-drop li:hover > ul {
+  display: block;
+  transition: 0.3s ease; }
+
+.card {
+  margin-bottom: 20px;
+  perspective: 1000px;
+  transform-style: preserve-3d; }
+
+.card-item {
+  margin-top: 10px;
+  transition: transform 0.3s;
+  border-radius: 5px; }
+
+footer {
+  width: 1400px;
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #1fcfcf;
+  border-radius: 9px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15); }
+  footer .text {
+    padding: 15px; }
 
 /*# sourceMappingURL=style.css.map */

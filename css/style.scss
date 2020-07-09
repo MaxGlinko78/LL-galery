@@ -1,9 +1,14 @@
 * {
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+
 }
 
 body {
-    background-color: gray;
+    margin: 0;
+    padding: 0;
+    background-color: grey;
 }
 
 $size: 50px;
@@ -12,18 +17,6 @@ $speed: 4s;
 $amimation: linear;
 $delay: 0s;
 $iterationCount: infinite;
-
-
-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    margin-top: 10px;
-    max-width: 1400px;
-    height: 100vh;
-
-}
 
 .container {
     width: 1400px;
@@ -47,17 +40,11 @@ section {
     border-radius: 9px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
 
-}
 
-.header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0 auto;
-    max-width: 1400px;
-    height: 200px;
-    background-color: #27ae60;
-    border-radius: 5px;
+
+
+
+
 }
 
 .header-logo {
@@ -86,6 +73,7 @@ section {
 
 }
 
+
 .avatar {
     width: $size;
     height: $size;
@@ -99,17 +87,17 @@ section {
     height: 120px;
 }
 
-.wrapper-animation {
+.wrapper {
     transform: translate(-110%);
 }
 
-.wrapper-animation,
+.wrapper,
 .boll {
     width: $size;
     height: $size;
 }
 
-.wrapper-animation {
+.wrapper {
     position: relative;
     transform: translate(50px 10px);
 }
@@ -287,6 +275,7 @@ section {
     }
 }
 
+
 .header-title {
     display: flex;
     flex-direction: column;
@@ -312,148 +301,6 @@ section {
     align-items: flex-end;
     flex-direction: column;
 }
-
-
-.wrapper {
-    position: relative;
-    overflow-x: hidden;
-
-}
-
-.line {
-
-    position: fixed;
-    left: 100%;
-    width: 11%;
-    height: 100vh;
-    background-color: lightgreen;
-
-}
-
-.title-line {
-    display: flex;
-    margin-top: 100px;
-    transform: rotate(90deg);
-}
-
-.item-line {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: 0.8em;
-}
-
-.menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    z-index: 99;
-    left: 0;
-    top: 0;
-    width: 20%;
-    /*ширена меню*/
-    height: 100vh;
-    background-color: white;
-    transition: 1s;
-    transform: translateX(-100%);
-}
-
-.menu_active {
-    transform: translateX(-20%);
-}
-
-.menu-list,
-.menu-list ul,
-.menu-list ol {
-    position: relative;
-    left: -150px;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    height: 60%;
-
-}
-
-.menu-list a {
-    display: block;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 900;
-    width: 60px;
-
-    &:hover {
-        color: #27ae60;
-    }
-}
-
-/*==========Sub menu==========*/
-.menu-list li ul {
-    position: relative;
-    min-width: 150px;
-    display: none;
-}
-
-.menu-list li>ul li a {
-    text-transform: none;
-}
-
-.menu-list li:hover>ul {
-    display: block;
-
-}
-
-
-
-
-
-
-.menu-btn {
-    width: 30px;
-    height: 30px;
-    //background-image: url(../img/btn-close);
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    z-index: 99;
-}
-
-.btn-line {
-    fill: black;
-
-    &:hover {
-        fill: white;
-
-    }
-}
-
-.content {
-    transition: 1s;
-    position: relative;
-    z-index: 0;
-}
-
-.content_active {
-    transform: translateX(10%);
-}
-
-
-
-.news {
-    background-color: #9b59b6;
-}
-
-.contacts {
-    background-color: #3498db;
-}
-
-.portfolio {
-    background-color: #f1c40f;
-}
-
-
 
 
 .nav-top-menu {
@@ -546,6 +393,7 @@ section {
 }
 
 
+
 .author {
     display: flex;
     justify-content: space-evenly;
@@ -591,9 +439,7 @@ section {
 }
 
 
-
 .nav-drop a {
-    list-style-type: none;
     border: 2px solid #4169E1;
     padding: 10px;
     margin: 0 auto;
@@ -605,15 +451,15 @@ section {
     position: absolute;
     min-width: 150px;
     display: none;
-    list-style: none;
+
+
 }
 
-li {
-    list-style-type: none;
+.nav-drop li>ul li {
+    //border: 1px solid lightgrey;
 }
 
 .nav-drop li>ul li a {
-
     padding: 10px;
     text-transform: none;
 
@@ -656,7 +502,8 @@ li {
 
 footer {
 
-
+    display: flex;
+    justify-content: space-evenly;
     width: 1400px;
     margin: 0 auto;
     margin-top: 5px;
@@ -670,3 +517,12 @@ footer {
     }
 
 }
+
+
+
+
+
+
+
+
+//transform: translate($distace, 0);
